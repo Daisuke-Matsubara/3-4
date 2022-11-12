@@ -1,11 +1,6 @@
 body {
-    width: 100%;
+    color: white;
     background-color: gray;
     text-align: center;
     font-family: serif;
-}
-
-h1 {
-    color: white;
-    border-bottom: solid 4px white;
 }
