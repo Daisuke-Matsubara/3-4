@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/qstyle.css">
 </head>
 <body>
+    <form action = "answer.php" method = "post" >
     <?php
     $my_name = filter_input(INPUT_POST , 'my_name');
     $port = ["80","22","20","21"];
@@ -15,34 +16,29 @@
     $command = ["join","select","insert","update"];
     ?>
     <p>お疲れ様です <?php echo $my_name ; ?> さん</p>
-    <!--フォームの作成 通信はPOST通信で-->
-    <h2>①ネットワークのポート番号は何番？</h2>
-    <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-    
+    <h2>①ネットワークのポート番号は何番？</h2> 
     <?php foreach ($port as $value) { ?>
-    <input type="radio">
+    <input type="radio" name="port">
     <?php echo $value;
     }
     ?>
 
     <h2>②Webページを作成するための言語は？</h2>
-    <!--③ 問題のradioボタンを「foreach」を使って作成する-->
     <?php foreach ($language as $value) { ?>
-    <input type="radio">
+    <input type="radio" name="language">
     <?php echo $value;
     }
     ?>
 
     <h2>③MySQLで情報を取得するためのコマンドは？</h2>
-    <!--③ 問題のradioボタンを「foreach」を使って作成する-->
     <?php foreach ($command as $value) { ?>
-    <input type="radio">
+    <input type="radio" name="command">
     <?php echo $value;
     }
     ?>
 
-    <form action = "answer.php" method = "post" >
-            <input type = "submit" value = "回答する">
+    
+        <input type = "submit" value = "回答する">
     </form> 
 
 </body>
