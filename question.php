@@ -31,11 +31,11 @@
     ?>
 
     <h2>③MySQLで情報を取得するためのコマンドは？</h2>
-    <?php foreach ($command as $value) { ?>
-    <input type="radio" name="command">
-    <?php echo $value;
-    }
-    ?>
+    <input type="radio" name="command" value="join">join
+    <input type="radio" name="command" value="select">select
+    <input type="radio" name="command" value="insert">insert
+    <input type="radio" name="command" value="update">update
+    <br>   
 
     
         <input type = "submit" value = "回答する">
