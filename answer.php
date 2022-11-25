@@ -8,18 +8,15 @@
     <link rel="stylesheet" href="css/astyle.css">
 </head>
 <body>
-<?php 
-//[question.php]から送られてきた名前の変数、選択した回答、問題の答えの変数を作成
-$my_name = filter_input(INPUT_POST , 'my_name');
+<?php
 $port = $_POST['port'];
 $language = $_POST['language'];
 $command = $_POST['command'];
-//選択した回答と正解が一致していれば「正解！」、一致していなければ「残念・・・」と出力される処理を組んだ関数を作成する
+$hidden_param = $_POST['hidden_param'];
 ?>
 
-<p><?php echo $my_name ; ?>さんの結果は・・・？</p>
-<p>①の答え <?php echo $port; ?>です </p>
-<!--作成した関数を呼び出して結果を表示-->
+<p><?php echo $hidden_param ; ?>さんの結果は・・・？</p>
+<p>①の答え</p>
 <?php if($port == '80') {
     echo "正解！";
 } else {
@@ -27,8 +24,7 @@ $command = $_POST['command'];
 }
 ?>
 
-<p>②の答え <?php echo $language; ?>です</p>
-<!--作成した関数を呼び出して結果を表示-->
+<p>②の答え</p>
 <?php if($language == 'PHP') {
     echo "正解！";
 } else {
@@ -36,9 +32,8 @@ $command = $_POST['command'];
 }
 ?>
 
-<p>③の答え <?php echo $command; ?></p>
-<!--作成した関数を呼び出して結果を表示-->
-<?php if($command == 'join') {
+<p>③の答え</p>
+<?php if($command == 'select') {
     echo "正解！";
 } else {
     echo "残念...";
