@@ -1,14 +1,13 @@
-<head>
-    <link rel="stylesheet" href="css/qstyle.css">
-</head>
+<link rel="stylesheet" href="css/qstyle.css">
 <body>
-    <form action = "answer.php" method = "post" >
-    <?php
+<?php
     $my_name = $_POST['my_name'];
     $port = ["80","22","20","21"];
     $language = ["PHP","Python","JAVA","HTML"];
     $command = ["join","select","insert","update"];
     ?>
+        
+<form action = "answer.php" method = "post" >
     <input type="hidden" name="hidden_param" value=<?php echo $my_name ?> />
 
     <p>お疲れ様です <?php echo $my_name ; ?> さん</p>
@@ -38,6 +37,5 @@
     </form> 
 
 </body>
-</html>
 
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
