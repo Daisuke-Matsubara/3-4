@@ -19,7 +19,7 @@ function answer($question,$choice,$number) {?>
         echo "残念...";
     } 
     echo '<br>';
-}
+} 
 
 answer($port,80,"①");
 answer($language,'PHP',"②");
